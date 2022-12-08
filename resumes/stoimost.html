@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+
+
+
+<p>Выберите язык:</p><select name="select" id="elem1"> 
+    <option value="Javascript">Javascript</option>
+    <option value="CSS">CSS</option>
+    <option value="HTML">HTML</option>
+    <input id="butt1" type="button">Принять<br>
+    <div id="str1"></div><br><br>
+  </select>
+  <p>Выберите количество часов:</p><select name="select" id="elem2"> 
+    <option value="2 часа">2</option>
+    <option value="3 часа">3</option>
+    <option value="4 часа">4</option>
+    <input id="butt2" type="button">Принять<br>
+    <div id="str2"></div><br><br>
+  </select>
+    <p>Формат обучения</p>
+    <div>
+    <input type="checkbox" id="ochno" name="format" value="1">
+    <label for="ochno">Очно</label>
+    </div>
+    <div>
+      <input type="checkbox" id="zaochno" name="format" value="1">
+      <label for="zaochno">Заочно</label>
+      </div>
+    <div>
+    <input id="butt3" type="button">Принять<br>
+    </div>
+    <div id="str3"></div><br>
+   
+<script>
+
+
+
+butt1.onclick = function(){ 
+    let val1 = document.getElementById('elem1').value;
+    document.getElementById('str1').innerHTML="Вы ввели: "+val1;
+}
+
+butt2.onclick = function(){ 
+    let val2 = document.getElementById('elem2').value;
+    document.getElementById('str2').innerHTML="Вы ввели: "+val2;
+}
+butt3.onclick = function() {
+    if (document.getElementById('ochno').checked) {
+      let val31 = document.getElementById('ochno').value;
+      document.getElementById('str3').innerHTML="Вы ввели: Очно ";
+    }
+    else if (document.getElementById('zaochno').checked) {
+      let val31 = document.getElementById('zaochno').value;
+      document.getElementById('str3').innerHTML="Вы ввели: Заочно";
+    }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
